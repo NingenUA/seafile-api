@@ -16,6 +16,9 @@ module SeafileApi
 
 end
 require "seafile-api/file/post_operations"
+require "seafile-api/message"
+require "seafile-api/account"
+require "seafile-api/starred"
 require "seafile-api/file/dry_methods"
 require "seafile-api/file/file_operations"
 require "seafile-api/file/get_operations"
