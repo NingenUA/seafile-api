@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = ""
   spec.license       = "MIT"
 
-  spec.files         = ["lib/seafile-api.rb","lib/seafile-api/starred.rb","lib/seafile-api/message.rb", "lib/seafile-api/file.rb", "lib/seafile-api/account.rb", "lib/seafile-api/config.rb", "lib/seafile-api/file/file_operations.rb", "lib/seafile-api/file/get_operations.rb", "lib/seafile-api/file/post_operations.rb", "lib/seafile-api/file/dry_methods.rb"]
+  spec.files         = ["lib/seafile-api.rb","lib/seafile-api/starred.rb","lib/seafile-api/message.rb", "lib/seafile-api/file.rb", "lib/seafile-api/account.rb", "lib/seafile-api/config.rb", "lib/seafile-api/file/file_operations.rb", "lib/seafile-api/file/get_operations.rb", "lib/seafile-api/file/post_operations.rb", "lib/seafile-api/file/dry_methods.rb", "lib/seafile-api/group.rb", "lib/seafile-api/group_member.rb", "lib/seafile-api/group_message.rb"]
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake"
 end

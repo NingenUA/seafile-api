@@ -17,6 +17,9 @@ module SeafileApi
 end
 require "seafile-api/file/post_operations"
 require "seafile-api/message"
+require "seafile-api/group"
+require "seafile-api/group_member"
+require "seafile-api/group_message"
 require "seafile-api/account"
 require "seafile-api/starred"
 require "seafile-api/file/dry_methods"
