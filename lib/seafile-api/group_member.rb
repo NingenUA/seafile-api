@@ -9,10 +9,10 @@ module SeafileApi
     end
 
     private
-    #curl -X PUT -d "user_name=user@example.com"-H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' "https://cloud.seafile.com/api2/groups/1/members/"
+    #curl -X PUuT -d "user_name=user@example.com"-H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' "https://cloud.seafile.com/api2/groups/1/members/"
     def put_new_meber_to_group(user_email,group_id)
       token = get_sf_token
-      url = "#{self.host}/api2/groups/#{group_id}/members/"
+      url = "#{self.host}/api2/groups/#{group_id}/members"
       c = curl_new(url,token)
       c.http_put(Curl::PostField.content('user_name', user_email))
       c.body_str
@@ -20,7 +20,7 @@ module SeafileApi
 
     def del_group_member(user_email,group_id)
       token = get_sf_token
-      url = "#{self.host}/api2/groups/#{group_id}/members/"
+      url = "#{self.host}/api2/groups/#{group_id}/members"
       c = curl_new(url,token)
       c.http_delete(Curl::PostField.content('user_name', user_email))
       c.body_str
