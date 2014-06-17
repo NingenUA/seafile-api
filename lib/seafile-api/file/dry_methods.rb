@@ -25,7 +25,7 @@ module SeafileApi
     end
 
     def curl_new(url,token)
-      c = Curl::Easy.new(url)
+      c = Curl::Easy.new(URI::encode(url))
       c.multipart_form_post = true
       c.headers['Authorization'] = "Token #{token}"
       c

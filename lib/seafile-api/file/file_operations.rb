@@ -6,7 +6,7 @@ module SeafileApi
      def delete(filename)
        token =get_sf_token
        url = "#{self.host}/api2/repos/#{self.repo}/file/?p=/#{filename}"
-       c = curl_new(URI::encode(url),token)
+       c = curl_new(url,token)
        c.headers['Accept'] = "application/json; charset=utf-8; indent=4"
        c.http_delete()
        c.body_str
@@ -32,7 +32,7 @@ module SeafileApi
      def create(filename)
        token =get_sf_token
        url = "#{self.host}/api2/repos/#{self.repo}/file/?p=/#{filename}"
-       c = curl_new(URI::encode(url),token)
+       c = curl_new(url,token)
        c.headers['Accept'] = "application/json; charset=utf-8; indent=4"
        c.http_post(Curl::PostField.content('operation', 'create'))
        c.body_str
@@ -42,7 +42,7 @@ module SeafileApi
      def move(filename,dst_dir,dst_repo)
        token =get_sf_token
        url = "#{self.host}/api2/repos/#{self.repo}/file/?p=/#{filename}"
-       c = curl_new(URI::encode(url),token)
+       c = curl_new(url,token)
        c.headers['Accept'] = "application/json; charset=utf-8; indent=4"
        c.http_post(Curl::PostField.content('operation', 'move'),Curl::PostField.content('dst_repo', dst_repo),Curl::PostField.content('dst_dir', dst_dir))
        c.body_str
@@ -52,7 +52,7 @@ module SeafileApi
      def copy(filename,dst_dir,dst_repo)
        token =get_sf_token
        url = "#{self.host}/api2/repos/#{self.repo}/fileops/copy/"
-       c = curl_new(URI::encode(url),token)
+       c = curl_new(url,token)
        c.headers['Accept'] = "application/json; charset=utf-8; indent=4"
        c.http_post(Curl::PostField.content('dst_repo', dst_repo),Curl::PostField.content('dst_dir', dst_dir),Curl::PostField.content('file_names', filename))
        c.body_str
@@ -62,7 +62,7 @@ module SeafileApi
      def rename(old_name,new_name)
        token =get_sf_token
        url = "#{self.host}/api2/repos/#{self.repo}/file/?p=/#{old_name}"
-       c = curl_new(URI::encode(url),token)
+       c = curl_new(url,token)
        c.headers['Accept'] = "application/json; charset=utf-8; indent=4"
        c.http_post(Curl::PostField.content('operation', 'rename'),Curl::PostField.content('newname', new_name))
        c.body_str

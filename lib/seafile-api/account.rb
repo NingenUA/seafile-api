@@ -22,7 +22,7 @@ module SeafileApi
     def delete_acc(email)
       token =get_sf_token
       url = "#{self.host}/api2/accounts/#{email}"
-      c = curl_new(URI::encode(url),token)
+      c = curl_new(url,token)
       c.headers['Accept'] = "application/json; charset=utf-8; indent=4"
       c.http_delete()
       c.body_str

@@ -30,7 +30,7 @@ module SeafileApi
     def reply_message(email,message)
       token =get_sf_token
       url = "#{self.host}/api2/user/msgs/#{email}/"
-      c = curl_new(URI::encode(url),token)
+      c = curl_new(url,token)
       c.headers['Accept'] = "application/json; charset=utf-8; indent=4"
       c.http_post(Curl::PostField.content('message', "#{message}"))
       c.body_str

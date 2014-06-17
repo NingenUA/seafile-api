@@ -10,7 +10,7 @@ module SeafileApi
         http = curl_get("update-link/",token)
         if is_http?(http)
           url = cl_body_str(http)
-          c = curl_new(URI::encode(url),token)
+          c = curl_new(url,token)
           c.http_post(Curl::PostField.file('file', file),Curl::PostField.content('filename', File.basename(file)),Curl::PostField.content('target_file', "/#{(target_file)}"))
           c.body_str
         else
@@ -36,7 +36,7 @@ module SeafileApi
         http = curl_get("upload-link/",token)
         if is_http?(http)
           url = cl_body_str(http)
-          c = curl_new(URI::encode(url),token)
+          c = curl_new(url,token)
           c.http_post(Curl::PostField.file('file', file),Curl::PostField.content('filename',File.basename(file)) ,Curl::PostField.content('parent_dir', '/'))
           c.body_str
         else
