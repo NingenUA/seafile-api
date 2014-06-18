@@ -1,3 +1,5 @@
+.idea
+*.pdf
 *.gem
 *.rbc
 .bundle

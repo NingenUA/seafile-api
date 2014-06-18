@@ -1,7 +1,4 @@
-require 'net/http'
-require 'json'
-require 'curb'
-include URI
+
 
 module SeafileApi
   class Connect
@@ -54,11 +51,10 @@ module SeafileApi
     def delete_file(filename)
       delete(filename)
     end
-=begin  not working
-    def self::revert(filename,commit_id)
-      revert_file(filename,commit_id)
+    #TODO: TEST !!!
+    def revert_file(filename,commit_id)
+      revert("/#{filename}",commit_id)
     end
-=end
 
   end
 end

@@ -12,8 +12,9 @@ module SeafileApi
     def put_share_library(repo_id,share_type,user,group_id,permission)
       token = get_sf_token
       url = "#{self.host}/api2/shared-repos/#{repo_id}/?share_type=#{share_type}&user=#{user}group_id=#{group_id}&permission=#{permission}"
-      c = curl_new(url,token)
-      c.http_put()
+      c = curl_put(url,token)
+      c.put_data=''
+      c.post
       c.body_str
     end
 

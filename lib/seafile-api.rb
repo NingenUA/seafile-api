@@ -1,3 +1,8 @@
+require 'json'
+require 'curb'
+require 'net/http'
+include URI
+
 module SeafileApi
   class Connect
 

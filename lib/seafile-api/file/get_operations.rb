@@ -6,7 +6,7 @@ module SeafileApi
           begin
             res = Net::HTTP.post_form(token_url, :username => self.user_name , :password => self.password)
           rescue Exception => e
-            p e
+            p "!!!!!!!!!!!!!!!! #{e}"
           end
           JSON.parse(res.body)["token"]
         end

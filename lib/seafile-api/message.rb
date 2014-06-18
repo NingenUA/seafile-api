@@ -1,13 +1,13 @@
 module SeafileApi
   class Connect
-    def list_user_message(email)
-      list_message(email)
+    def list_user_message(to_email)
+      list_message(to_email)
     end
     def unread_message
       count_unread_message
     end
-    def reply_user_message(email,message)
-      reply_message(email,message)
+    def reply_user_message(to_email,message)
+      reply_message(to_email,message)
     end
 
     private

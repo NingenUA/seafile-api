@@ -12,19 +12,15 @@ module SeafileApi
        c.body_str
      end
 
-     #TODO: Revert  is not working, some problem with put and 2  send objects
-     #curl -v -X PUT -d "commit_id=a1ec20709675f4dc8db825cdbca296be245d189b&p=/foo.c" -H "Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd" -H 'Accept: application/json; indent=4' https://cloud.seafile.com/api2/repos/8f5f2222-72a8-454f-ac40-8397c5a556a8/file/revert/
+     #TODO:need test
+     #curl -v -X PUT -d "commit_id=a1ec20709675f4dc8db825cdbca296be245d189b&p=/foo.c" -H "Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd" -H 'Accept: application/json; indent=4' https://cloud.seafile.com/api2/repos/8f5f2222-72a8-454f-ac40-8397c5a556a8/file/revert
      def revert(filename,commit_id)
        token =get_sf_token
-       url = "#{self.host}/api2/repos/#{self.repo}/file/revert/"
-       http = Curl.put(URI::encode(url)) do |http|
-         http.multipart_form_post = true
-         http.headers['Authorization'] = "Token #{token}"
-         http.headers['Accept'] = "application/json; charset=utf-8; indent=4"
-         http.content['commit_id']=commit_id
-         http.content['p']= filename
-       end
-       http.body_str
+       url = "#{self.host}/api2/repos/#{self.repo}/file/revert"
+       c=curl_put(url,token)
+       c.put_data={"commit_id" => commit_id,"p" => filename }.to_json
+       c.post
+       c.body_str
      end
 
 

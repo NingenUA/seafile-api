@@ -37,16 +37,18 @@ module SeafileApi
     def create_acc(email,pass)
       token = get_sf_token
       url = "#{self.host}/api2/accounts/#{email}/"
-      c = curl_new(url,token)
-      c.http_put(Curl::PostField.content('password', pass))
+      c = curl_put(url,token)
+      c.put_data= {"password" => pass}.to_json
+      c.post
       c.body_str
     end
 #curl -v -X PUT -d "password=654321&is_staff=true" -H "Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd" -H 'Accept: application/json; indent=4' https://cloud.seafile.com/api2/accounts/newaccount@gmail.com/
     def update_acc(email,pass)
       token = get_sf_token
       url = "#{self.host}/api2/accounts/#{email}/"
-      c = curl_new(url,token)
-      c.http_put(Curl::PostField.content('password', pass))
+      c = curl_put(url,token)
+      c.put_data= {"password" => pass}.to_json
+      c.post
       c.body_str
     end
 

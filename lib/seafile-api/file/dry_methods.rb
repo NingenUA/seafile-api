@@ -1,5 +1,7 @@
+
 module SeafileApi
   class Connect
+
     private
 
     def result(result)
@@ -36,6 +38,21 @@ module SeafileApi
         http.headers['Authorization'] = "Token #{token}"
       end
     end
+=begin
+http = Curl.put(url) do |http|
+ http.headers['Authorization'] = "Token #{token}"
+ http.headers['Content-Type'] = 'application/json'
+ http.put_data = '{"group_name":"new_group1"}'
+end
+=end
+#TODO: add hash arguments with data needed to push
+    def curl_put(url,token)
+      c = Curl::Easy.new(URI::encode(url))
+      c.headers['Authorization'] = "Token #{token}"
+      c.headers['Content-Type'] = 'application/json'
+      c
+    end
+
 
   end
 end

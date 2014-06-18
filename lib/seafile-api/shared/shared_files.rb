@@ -4,10 +4,9 @@ module SeafileApi
     #curl -H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' "https://cloud.seafile.com/api2/shared-files/"
     def get_list_shared_files
       token = get_sf_token
-      http = curb_get("shared-repos/",token)
+      http = curb_get("shared-files/",token)
       http.body_str
     end
-
     #curl -H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' "https://cloud.seafile.com/api2/f/ad93cd0d66/"
     def get_shared_file_link(file_t)
       token = get_sf_token
@@ -25,7 +24,7 @@ module SeafileApi
     #curl -H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' "https://cloud.seafile.com/api2/f/ad93cd0d66/detail/"
     def get_share_file_detail(file_t)
       token = get_sf_token
-      http = curb_get("f/#{file_t}/",token)
+      http = curb_get("f/#{file_t}/detail/",token)
       http.body_str
     end
 
@@ -43,7 +42,7 @@ module SeafileApi
       c = curl_new(url,token)
       c.headers['Accept'] = "application/json; charset=utf-8; indent=4"
       c.http_delete()
-      c.body_str
+      c.head.split()[2]
     end
   end
 
