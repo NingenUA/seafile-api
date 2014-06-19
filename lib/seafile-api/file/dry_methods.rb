@@ -26,33 +26,32 @@ module SeafileApi
       http.body_str.gsub('"', '')
     end
 
-    def curl_new(url,token)
+    def curl_new(url)
       c = Curl::Easy.new(URI::encode(url))
       c.multipart_form_post = true
-      c.headers['Authorization'] = "Token #{token}"
+      c.headers['Authorization'] = "Token #{get_sf_token}"
       c
     end
-
-    def curl_get(url,token)
-      Curl.get(URI::encode("#{self.host}/api2/repos/#{self.repo}/#{url}")) do|http|
-        http.headers['Authorization'] = "Token #{token}"
+    def curl_get(url)
+      Curl.get(URI::encode("#{self.host}/api2/#{url}")) do|http|
+        http.headers['Authorization'] = "Token #{get_sf_token}"
       end
     end
-=begin
-http = Curl.put(url) do |http|
- http.headers['Authorization'] = "Token #{token}"
- http.headers['Content-Type'] = 'application/json'
- http.put_data = '{"group_name":"new_group1"}'
-end
-=end
-#TODO: add hash arguments with data needed to push
-    def curl_put(url,token)
+    def curl_put(url,data)
       c = Curl::Easy.new(URI::encode(url))
-      c.headers['Authorization'] = "Token #{token}"
+      c.headers['Authorization'] = "Token #{get_sf_token}"
       c.headers['Content-Type'] = 'application/json'
+      c.put_data= data.to_json
+      c.post
       c
     end
-
+    def curl_delete(url,data)
+      c = Curl::Easy.new(URI::encode(url))
+      c.headers['Authorization'] = "Token #{get_sf_token}"
+      c.headers['Content-Type'] = 'application/json'
+      c.put_data= data.to_json
+      c.http_delete()
+    end
 
   end
 end

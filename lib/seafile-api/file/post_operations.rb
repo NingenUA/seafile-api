@@ -6,11 +6,9 @@ module SeafileApi
       #TODO: add validation check
       #TODO: execption rescue
       def update(file,target_file)
-        token =get_sf_token
-        http = curl_get("update-link/",token)
+        http = curl_get("repos/#{self.repo}/update-link/")
         if is_http?(http)
-          url = cl_body_str(http)
-          c = curl_new(url,token)
+          c = curl_new(cl_body_str(http))
           c.http_post(Curl::PostField.file('file', file),Curl::PostField.content('filename', File.basename(file)),Curl::PostField.content('target_file', "/#{(target_file)}"))
           c.body_str
         else
@@ -32,11 +30,9 @@ module SeafileApi
     500 Internal server error
 =end
       def upload(file)
-        token = get_sf_token
-        http = curl_get("upload-link/",token)
+        http = curl_get("repos/#{self.repo}/upload-link/")
         if is_http?(http)
-          url = cl_body_str(http)
-          c = curl_new(url,token)
+          c = curl_new(cl_body_str(http))
           c.http_post(Curl::PostField.file('file', file),Curl::PostField.content('filename',File.basename(file)) ,Curl::PostField.content('parent_dir', '/'))
           c.body_str
         else

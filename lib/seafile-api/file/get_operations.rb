@@ -13,8 +13,7 @@ module SeafileApi
 
         #curl -H 'Authorization: Token f2210dacd3606d94ff8e61d99b477fd' -H 'Accept: application/json; charset=utf-8; indent=4' https://cloud.seafile.com/api2/repos/dae8cecc-2359-4d33-aa42-01b7846c4b32/file/revision/?p=/foo.c\&commit_id=a1ec20709675f4dc8db825cdbca296be245d189b
         def get_link_file_revision(filename,commit_id)
-          token =get_sf_token
-          http = curl_get("file/revision/?p=/#{filename}\&commit_id=#{commit_id}",token)
+          http = curl_get("repos/#{self.repo}/file/revision/?p=/#{filename}&commit_id=#{commit_id}")
           result(cl_body_str(http))
         end
 
@@ -25,29 +24,25 @@ module SeafileApi
         # 404 File not found
         # 520 Operation failed.
         def get_link(filename)
-          token =get_sf_token
-          http = curl_get("file/?p=/#{filename}",token)
+          http = curl_get("repos/#{self.repo}/file/?p=/#{filename}")
           result(cl_body_str(http))
         end
         def get_block
-          token =get_sf_token
-          http = curl_get("upload-blks-link/",token)
+          http = curl_get("repos/#{self.repo}/upload-blks-link/")
           result(cl_body_str(http))
         end
 
         #curl -H 'Authorization: Token f2210dacd3606d94ff8e61d99b477fd' -H 'Accept: application/json; charset=utf-8; indent=4' https://cloud.seafile.com/api2/repos/dae8cecc-2359-4d33-aa42-01b7846c4b32/file/detail/?p=/foo.c
         #get file description
         def get_description(filename)
-          token = get_sf_token
-          http = curl_get("file/detail/?p=/#{filename}",token)
+          http = curl_get("repos/#{self.repo}/file/detail/?p=/#{filename}")
           result(cl_body_str(http))
         end
 
         #curl -H 'Authorization: Token f2210dacd3606d94ff8e61d99b477fd' -H 'Accept: application/json; charset=utf-8; indent=4' https://cloud.seafile.com/api2/repos/dae8cecc-2359-4d33-aa42-01b7846c4b32/file/history/?p=/foo.c
         #get file History
         def get_history(filename)
-          token = get_sf_token
-          http = curl_get("file/history/?p=/#{filename}",token)
+          http = curl_get("repos/#{self.repo}/file/history/?p=/#{filename}")
           result(http.body_str.gsub('"', ''))
         end
 
