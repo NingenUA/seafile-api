@@ -9,24 +9,22 @@ module SeafileApi
     def group_messages_replies
       get_group_messages_replies
     end
-    #TODO: Page unavailable<
     def send_group_message(group_id,message,repo_id=self.repo,path=nil)
       send_message_to_group(group_id,message,repo_id,"/#{path}")
     end
 
-    #TODO: Page unavailable<
     def reply_group_message(group_id,message,msg_id)
       reply_message_to_group(group_id,message,msg_id)
     end
 
     private
 
-    a#curl -d "message=this is another test&repo_id=c7436518-5f46-4296-97db-2fcba4c8c8db&path=/123.md" -H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' "https://cloud.seafile.com/api2/group/msgs/1/"
+    #curl -d "message=this is another test&repo_id=c7436518-5f46-4296-97db-2fcba4c8c8db&path=/123.md" -H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' "https://cloud.seafile.com/api2/group/msgs/1/"
     def send_message_to_group(group_id,message,repo_id,path)
       token = get_sf_token
       url = "#{self.host}/api2/group/msgs/#{group_id}/"
       c = curl_new(url,token)
-      c.http_post(Curl::PostField.content('massage', message),Curl::PostField.content('repo_id', repo_id),Curl::PostField.content('path', path))
+      c.http_post(Curl::PostField.content('message', message),Curl::PostField.content('repo_id', repo_id),Curl::PostField.content('path', path))
       c.body_str
     end
 
@@ -35,7 +33,7 @@ module SeafileApi
       token = get_sf_token
       url = "#{self.host}/api2/group/#{group_id}/msg/#{msg_id}/"
       c = curl_new(url,token)
-      c.http_post(Curl::PostField.content('massage', message))
+      c.http_post(Curl::PostField.content('message', message))
       c.body_str
     end
 

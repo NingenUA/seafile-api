@@ -12,7 +12,7 @@ module SeafileApi
        c.body_str
      end
 
-     #TODO:need test
+     #TODO:need more test , curl not working  return server error
      #curl -v -X PUT -d "commit_id=a1ec20709675f4dc8db825cdbca296be245d189b&p=/foo.c" -H "Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd" -H 'Accept: application/json; indent=4' https://cloud.seafile.com/api2/repos/8f5f2222-72a8-454f-ac40-8397c5a556a8/file/revert
      def revert(filename,commit_id)
        token =get_sf_token

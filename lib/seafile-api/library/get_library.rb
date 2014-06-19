@@ -25,7 +25,13 @@ module SeafileApi
     #curl -G -H ‘Authorization: Token 24fd3c026886e3121b2ca630805ed425c272cb96’ -H ‘Accept: application/json; indent=4’ https://cloud.seafile.com/api2/search/?q=keyword
     def get_searched_lib(keyword)
       token = get_sf_token
-      http = curb_get("/search/?q=#{keyword}",token)
+      http = curb_get("search/?q=#{keyword}",token)
+      http.body_str
+    end
+    #curl -H 'Authorization: Token 24fd3c026886e3121b2ca630805ed425c272cb96' -H 'Accept: application/json; indent=4' https://cloud.seafile.com/api2/repos/
+    def get_list_lib
+      token = get_sf_token
+      http= curb_get("repos/",token)
       http.body_str
     end
     #curl -H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' "https://cloud.seafile.com/api2/virtual-repos/"
