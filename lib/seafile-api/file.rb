@@ -2,58 +2,58 @@
 
 module SeafileApi
   class Connect
-    def get_file_link(filename)
-      get_link(filename)
+    def get_file_link(filename,repo=self.repo)
+      get_link(filename,repo)
     end
     def get_token
       get_sf_token
     end
-    def get_file_description(filename)
-      get_description(filename)
+    def get_file_description(filename,repo=self.repo)
+      get_description(filename,repo)
     end
 
-    def get_link_revision(filename,commit_id)
-      get_link_file_revision(filename,commit_id)
+    def get_link_revision(filename,commit_id,repo=self.repo)
+      get_link_file_revision(filename,commit_id,repo)
     end
 
-    def get_file_history(filename)
-      get_history(filename)
+    def get_file_history(filename,repo=self.repo)
+      get_history(filename,repo)
     end
 
-    def get_block_link
-      get_block
+    def get_block_link(repo=self.repo)
+      get_block(repo)
     end
 
-    def upload_file(file)
-      upload(file)
+    def upload_file(file,repo=self.repo)
+      upload(file,repo)
     end
 
-    def update_file(file,target_file=nil)
-      update(file,(target_file ||File.basename(file) ))
+    def update_file(file,target_file=nil,repo=self.repo)
+      update(file,(target_file ||File.basename(file) ),repo)
     end
 
-    def create_file(filename)
-      create(filename)
+    def create_file(filename,repo=self.repo)
+      create(filename,repo)
     end
 
-    def rename_file(old_name,new_name)
-        rename(old_name,new_name)
+    def rename_file(old_name,new_name,repo=self.repo)
+        rename(old_name,new_name,repo)
     end
 
-    def copy_file(filename,dst_dir='/',dest_repo=self.repo)
-      copy(filename,dst_dir,dest_repo)
+    def copy_file(filename,dst_dir='/',dest_repo=self.repo,src_repo=self.repo)
+      copy(filename,dst_dir,dest_repo,src_repo)
     end
 
-    def move_file(filename,dst_dir='/',dest_repo=self.repo)
-      move(filename,dst_dir,dest_repo)
+    def move_file(filename,dst_dir='/',dest_repo=self.repo,src_repo=self.repo)
+      move(filename,dst_dir,dest_repo,src_repo)
     end
 
-    def delete_file(filename)
-      delete(filename)
+    def delete_file(filename,repo=self.repo)
+      delete(filename,repo)
     end
     #TODO: TEST !!!
-    def revert_file(filename,commit_id)
-      revert("/#{filename}",commit_id)
+    def revert_file(filename,commit_id,repo=self.repo)
+      revert("/#{filename}",commit_id,repo)
     end
 
   end

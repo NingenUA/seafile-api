@@ -5,10 +5,10 @@ module SeafileApi
       #TODO: analise and optimization arguments needed for file upload;
       #TODO: add validation check
       #TODO: execption rescue
-      def update(file,target_file)
-        http = curl_get("repos/#{self.repo}/update-link/")
+      def update(file,target_file,repo)
+        http = curl_get("repos/#{repo}/update-link/")
         if is_http?(http)
-          c = curl_new(cl_body_str(http))
+          c = curl_post(cl_body_str(http))
           c.http_post(Curl::PostField.file('file', file),Curl::PostField.content('filename', File.basename(file)),Curl::PostField.content('target_file', "/#{(target_file)}"))
           c.body_str
         else
@@ -29,10 +29,10 @@ module SeafileApi
     443 Out of quota
     500 Internal server error
 =end
-      def upload(file)
-        http = curl_get("repos/#{self.repo}/upload-link/")
+      def upload(file,repo)
+        http = curl_get("repos/#{repo}/upload-link/")
         if is_http?(http)
-          c = curl_new(cl_body_str(http))
+          c = curl_post(cl_body_str(http))
           c.http_post(Curl::PostField.file('file', file),Curl::PostField.content('filename',File.basename(file)) ,Curl::PostField.content('parent_dir', '/'))
           c.body_str
         else

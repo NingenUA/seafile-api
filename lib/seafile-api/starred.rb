@@ -18,15 +18,14 @@ module SeafileApi
     end
     #curl -v -d "repo_id=dae8cecc-2359-4d33-aa42-01b7846c4b32&p=/foo.md" -H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' -H 'Accept: application/json; charset=utf-8; indent=4' https://cloud.seafile.com/api2/starredfiles/
     def star_file(repo_id,file)
-      c = curl_new("#{self.host}/api2/starredfiles/")
+      c = curl_post("#{self.host}/api2/starredfiles/")
       c.headers['Accept'] = "application/json; charset=utf-8; indent=4"
       c.http_post(Curl::PostField.content('repo_id', repo_id),Curl::PostField.content('p', "/#{file}"))
       c.body_str
     end
     #curl -X DELETE -v  -H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' -H 'Accept: application/json; charset=utf-8; indent=4' 'https://cloud.seafile.com/api2/starredfiles/?repo_id=dae8cecc-2359-4d33-aa42-01b7846c4b32&p=/foo.md'
     def unstar_file(repo_id,file)
-      c = curl_delete("#{self.host}/api2/starredfiles/?repo_id=#{repo_id}&p=/#{file}",'')
-      c.body_str
+      curl_delete("#{self.host}/api2/starredfiles/?repo_id=#{repo_id}&p=/#{file}",'').body_str
     end
   end
 end

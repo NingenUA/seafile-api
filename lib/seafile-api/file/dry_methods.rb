@@ -26,7 +26,7 @@ module SeafileApi
       http.body_str.gsub('"', '')
     end
 
-    def curl_new(url)
+    def curl_post(url)
       c = Curl::Easy.new(URI::encode(url))
       c.multipart_form_post = true
       c.headers['Authorization'] = "Token #{get_sf_token}"

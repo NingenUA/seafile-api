@@ -21,14 +21,14 @@ module SeafileApi
 
     #curl -d "message=this is another test&repo_id=c7436518-5f46-4296-97db-2fcba4c8c8db&path=/123.md" -H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' "https://cloud.seafile.com/api2/group/msgs/1/"
     def send_message_to_group(group_id,message,repo_id,path)
-      c = curl_new("#{self.host}/api2/group/msgs/#{group_id}/")
+      c = curl_post("#{self.host}/api2/group/msgs/#{group_id}/")
       c.http_post(Curl::PostField.content('message', message),Curl::PostField.content('repo_id', repo_id),Curl::PostField.content('path', path))
       c.body_str
     end
 
     #curl -d "message=this is a reply" -H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' "https://cloud.seafile.com/api2/group/1/msg/1/"
     def reply_message_to_group(group_id,message,msg_id)
-      c = curl_new("#{self.host}/api2/group/#{group_id}/msg/#{msg_id}/")
+      c = curl_post("#{self.host}/api2/group/#{group_id}/msg/#{msg_id}/")
       c.http_post(Curl::PostField.content('message', message))
       c.body_str
     end
