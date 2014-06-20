@@ -32,6 +32,14 @@ module SeafileApi
       c.headers['Authorization'] = "Token #{get_sf_token}"
       c
     end
+     def curb_post(url,data={})
+      c = Curl::Easy.new(URI::encode(url))
+      c.headers['Authorization'] = "Token #{get_sf_token}"
+      data.delete_if { |key, value| value.nil? }
+      c.http_post(data.map{|key, value| Curl::PostField.content(key, value)}.join('&'))
+      c
+     end
+
     def curl_get(url)
       Curl.get(URI::encode("#{self.host}/api2/#{url}")) do|http|
         http.headers['Authorization'] = "Token #{get_sf_token}"
@@ -45,12 +53,13 @@ module SeafileApi
       c.post
       c
     end
-    def curl_delete(url,data)
+    def curl_delete(url,data='')
       c = Curl::Easy.new(URI::encode(url))
       c.headers['Authorization'] = "Token #{get_sf_token}"
       c.headers['Content-Type'] = 'application/json'
       c.put_data= data.to_json
       c.http_delete()
+      c
     end
 
   end

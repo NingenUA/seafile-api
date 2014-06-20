@@ -12,7 +12,6 @@ module SeafileApi
     def search_libraries(keyword)
       get_searched_lib(keyword)
     end
-    #TODO: > "{\"error_msg\": \"Library name is required.\"}"
     def list_libraries
       get_list_lib
     end
@@ -36,9 +35,8 @@ module SeafileApi
     end
 
     #post libraries
-    #TODO: check desk variable, add ecnrypt ability
-    def create_library(name,desc="new repo")
-      post_lib(name,desc)
+    def create_library(name,desc="new repo",pwd=nil)
+      post_lib({"name" =>name,"desc" =>desc,"passwd" => pwd})
     end
     def create_default_library
       post_default_lib
@@ -48,7 +46,7 @@ module SeafileApi
     end
 
     def decrypt_library(repo_id,password)
-      post_lib_pass(repo_id,password)
+      post_lib_pass(repo_id,{'password' => password })
     end
 
     # del libraries

@@ -25,11 +25,11 @@ module SeafileApi
     end
 
     def upload_file(file,repo=self.repo)
-      upload(file,repo)
+      upload(repo,{"file"=> file,"filename"=> File.basename(file),"parent_dir"=> "/"})
     end
 
     def update_file(file,target_file=nil,repo=self.repo)
-      update(file,(target_file ||File.basename(file) ),repo)
+      update(repo,{"file" => file, "filename" =>File.basename(file), "target_file"=> target_file ||File.basename(file)})
     end
 
     def create_file(filename,repo=self.repo)
@@ -38,14 +38,17 @@ module SeafileApi
 
     def rename_file(old_name,new_name,repo=self.repo)
         rename(old_name,new_name,repo)
+        move(old_name,repo,{"operation"=>"rename", "newname" => new_name})
+
     end
 
     def copy_file(filename,dst_dir='/',dest_repo=self.repo,src_repo=self.repo)
-      copy(filename,dst_dir,dest_repo,src_repo)
+      copy(src_repo,{"file_names"=>filename, "dst_repo" => dest_repo, "dst_dir"=>dst_dir})
     end
 
     def move_file(filename,dst_dir='/',dest_repo=self.repo,src_repo=self.repo)
-      move(filename,dst_dir,dest_repo,src_repo)
+
+      move(filename,src_repo,{"operation"=>"move", "dst_repo" => dest_repo, "dst_dir"=>dst_dir})
     end
 
     def delete_file(filename,repo=self.repo)

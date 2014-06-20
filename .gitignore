@@ -1,5 +1,6 @@
-.idea/workspace.xml
-.idea/*
+# RubyMine project files
+.idea
+/.idea/
 *.pdf
 *.gem
 *.rbc

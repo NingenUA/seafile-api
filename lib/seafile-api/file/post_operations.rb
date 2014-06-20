@@ -2,15 +2,16 @@ module SeafileApi
   class Connect
     private
       #update file_
+      #TODO: test
       #TODO: analise and optimization arguments needed for file upload;
       #TODO: add validation check
       #TODO: execption rescue
-      def update(file,target_file,repo)
+      def update(repo,data)
         http = curl_get("repos/#{repo}/update-link/")
+        p http
+        p http.body
         if is_http?(http)
-          c = curl_post(cl_body_str(http))
-          c.http_post(Curl::PostField.file('file', file),Curl::PostField.content('filename', File.basename(file)),Curl::PostField.content('target_file', "/#{(target_file)}"))
-          c.body_str
+          curb_post(cl_body_str(http),data).body_str
         else
           "something wrong #{http.body_str}"
         end
@@ -32,9 +33,7 @@ module SeafileApi
       def upload(file,repo)
         http = curl_get("repos/#{repo}/upload-link/")
         if is_http?(http)
-          c = curl_post(cl_body_str(http))
-          c.http_post(Curl::PostField.file('file', file),Curl::PostField.content('filename',File.basename(file)) ,Curl::PostField.content('parent_dir', '/'))
-          c.body_str
+          curb_post(http,data).body_str
         else
           "something wrong #{http.body_str}"
         end

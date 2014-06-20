@@ -16,7 +16,7 @@ module SeafileApi
           http = curl_get("repos/#{repo}/file/revision/?p=/#{filename}&commit_id=#{commit_id}")
           result(cl_body_str(http))
         end
-
+        #TODO: change all "/" methods
         #TODO: add download file methods http://stackoverflow.com/questions/2263540/how-do-i-download-a-binary-file-over-http
         #!!! get file link method
         # maybe Errors

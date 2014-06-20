@@ -7,7 +7,7 @@ module SeafileApi
       count_unread_message
     end
     def reply_user_message(to_email,message)
-      reply_message(to_email,message)
+      reply_message(to_email,{"message" => message})
     end
 
     private
@@ -23,10 +23,8 @@ module SeafileApi
     end
 
     #curl -d "message=this is a user msg reply" -H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' "https://cloud.seafile.com/api2/user/msgs/2/"
-    def reply_message(email,message)
-      c = curl_post("#{self.host}/api2/user/msgs/#{email}/")
-      c.http_post(Curl::PostField.content('message', "#{message}"))
-      c.body_str
+    def reply_message(email,data)
+      curb_post("#{self.host}/api2/user/msgs/#{email}/",data).body_str
     end
 
   end
