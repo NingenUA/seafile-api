@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c56557fa-cee3-4c8d-bd93-43a339948b52" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/seafile-api/group/group.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aaaa.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/erd.pdf" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/commit_id,p" afterPath="$PROJECT_DIR$/lib/seafile-api/directory.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/seafile-api/group_member.rb" afterPath="$PROJECT_DIR$/lib/seafile-api/group/group_member.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/seafile-api/group_message.rb" afterPath="$PROJECT_DIR$/lib/seafile-api/group/group_message.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="c56557fa-cee3-4c8d-bd93-43a339948b52" name="Default" comment="add functions for work with directory, and rebuild some logic&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/seafile-api/directory.rb" afterPath="$PROJECT_DIR$/lib/seafile-api/directory.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/seafile-api/file/dry_methods.rb" afterPath="$PROJECT_DIR$/lib/seafile-api/file/dry_methods.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/seafile-api/file.rb" afterPath="$PROJECT_DIR$/lib/seafile-api/file.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/seafile-api/file/file_operations.rb" afterPath="$PROJECT_DIR$/lib/seafile-api/file/file_operations.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/seafile-api/file/get_operations.rb" afterPath="$PROJECT_DIR$/lib/seafile-api/file/get_operations.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/seafile-api/group.rb" afterPath="$PROJECT_DIR$/lib/seafile-api/group.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/seafile-api/library.rb" afterPath="$PROJECT_DIR$/lib/seafile-api/library.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/seafile-api/group/group_message.rb" afterPath="$PROJECT_DIR$/lib/seafile-api/group/group_message.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/seafile-api/message.rb" afterPath="$PROJECT_DIR$/lib/seafile-api/message.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/seafile-api/library/post_library.rb" afterPath="$PROJECT_DIR$/lib/seafile-api/library/post_library.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/seafile-api/file/post_operations.rb" afterPath="$PROJECT_DIR$/lib/seafile-api/file/post_operations.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seafile-api.gemspec" afterPath="$PROJECT_DIR$/seafile-api.gemspec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/seafile-api.rb" afterPath="$PROJECT_DIR$/lib/seafile-api.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/seafile-api/starred.rb" afterPath="$PROJECT_DIR$/lib/seafile-api/starred.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -73,15 +62,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="post_library.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lib/seafile-api/library/post_library.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="6" column="0" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="group.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/lib/seafile-api/group/group.rb">
               <provider selected="true" editor-type-id="text-editor">
@@ -91,19 +71,28 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="post_operations.rb" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="post_operations.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/lib/seafile-api/file/post_operations.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="9" column="53" selection-start="301" selection-end="301" vertical-scroll-proportion="0.19331743" vertical-offset="0" max-vertical-offset="864">
+                <state line="9" column="53" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="864">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="group_message.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lib/seafile-api/group/group_message.rb">
+          <file leaf-file-name=".ruby-version" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/.ruby-version">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="11" column="0" selection-start="682" selection-end="682" vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="612">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="126">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".ruby-gemset" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/.ruby-gemset">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="126">
                   <folding />
                 </state>
               </provider>
@@ -112,16 +101,25 @@
           <file leaf-file-name="message.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/lib/seafile-api/message.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="27" column="0" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0" vertical-offset="132" max-vertical-offset="666">
+                <state line="27" column="0" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="directory.rb" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="directory.rb" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lib/seafile-api/directory.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="45" column="25" selection-start="2001" selection-end="2001" vertical-scroll-proportion="0.0" vertical-offset="528" max-vertical-offset="1062">
+                <state line="20" column="7" selection-start="570" selection-end="570" vertical-scroll-proportion="0.7302231" vertical-offset="0" max-vertical-offset="1062">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="library.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/lib/seafile-api/library.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="48" column="30" selection-start="1089" selection-end="1089" vertical-scroll-proportion="-13.37037" vertical-offset="503" max-vertical-offset="1314">
                   <folding />
                 </state>
               </provider>
@@ -131,10 +129,19 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="post_library.rb" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="dry_methods.rb" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/lib/seafile-api/file/dry_methods.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="46" column="12" selection-start="1245" selection-end="1249" vertical-scroll-proportion="0.9795082" vertical-offset="350" max-vertical-offset="1170">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="post_library.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/lib/seafile-api/library/post_library.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="10" column="22" selection-start="503" selection-end="574" vertical-scroll-proportion="0.21251476" vertical-offset="0" max-vertical-offset="847">
+                <state line="10" column="12" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
                   <folding />
                 </state>
               </provider>
@@ -190,7 +197,6 @@
         <option value="$PROJECT_DIR$/lib/seafile-api/group/group.rb" />
         <option value="$PROJECT_DIR$/lib/seafile-api.rb" />
         <option value="$PROJECT_DIR$/seafile-api.gemspec" />
-        <option value="$PROJECT_DIR$/lib/seafile-api/file/dry_methods.rb" />
         <option value="$PROJECT_DIR$/lib/seafile-api/library.rb" />
         <option value="$PROJECT_DIR$/lib/seafile-api/starred.rb" />
         <option value="$PROJECT_DIR$/lib/seafile-api/message.rb" />
@@ -201,6 +207,7 @@
         <option value="$PROJECT_DIR$/lib/seafile-api/group/group_message.rb" />
         <option value="$PROJECT_DIR$/lib/seafile-api/library/post_library.rb" />
         <option value="$PROJECT_DIR$/lib/seafile-api/file/post_operations.rb" />
+        <option value="$PROJECT_DIR$/lib/seafile-api/file/dry_methods.rb" />
       </list>
     </option>
   </component>
@@ -286,6 +293,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="seafile-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seafile-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seafile-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seafile-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="file" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -468,12 +497,12 @@
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919955" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37429538" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37429538" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1970181" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33032694" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1970181" sideWeight="0.4983165" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1970181" sideWeight="0.4983165" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15282215" sideWeight="0.50087875" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -526,20 +555,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/seafile-api/file.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="27" selection-start="1119" selection-end="1119" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1206">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/seafile-api/library.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="11" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.0" vertical-offset="880" max-vertical-offset="1422">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/seafile-api/library/del_library.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="19" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="504" />
@@ -778,27 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/seafile-api/file/dry_methods.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="58" selection-start="875" selection-end="875" vertical-scroll-proportion="0.0" vertical-offset="436" max-vertical-offset="1278">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/seafile-api/library.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="40" selection-start="1057" selection-end="1057" vertical-scroll-proportion="-31.333334" vertical-offset="0" max-vertical-offset="1314">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/seafile-api/message.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0" vertical-offset="132" max-vertical-offset="666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/seafile-api/starred.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="0" selection-start="774" selection-end="774" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="594">
@@ -820,13 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/seafile-api/directory.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="25" selection-start="2001" selection-end="2001" vertical-scroll-proportion="0.0" vertical-offset="528" max-vertical-offset="1062">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/seafile-api/group.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="38" selection-start="731" selection-end="731" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="792">
@@ -841,16 +828,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/seafile-api/library/post_library.rb">
+    <entry file="file://$PROJECT_DIR$/lib/seafile-api/file/post_operations.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
+        <state line="9" column="53" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="864">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/seafile-api/file/post_operations.rb">
+    <entry file="file://$PROJECT_DIR$/.ruby-version">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="53" selection-start="301" selection-end="301" vertical-scroll-proportion="0.19331743" vertical-offset="0" max-vertical-offset="864">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="838">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.ruby-gemset">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="838">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/seafile-api/message.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/seafile-api/library/post_library.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="12" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/seafile-api/library.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="30" selection-start="1089" selection-end="1089" vertical-scroll-proportion="-13.37037" vertical-offset="503" max-vertical-offset="1314">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/seafile-api/file/dry_methods.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="12" selection-start="1245" selection-end="1249" vertical-scroll-proportion="0.9795082" vertical-offset="350" max-vertical-offset="1170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/seafile-api/directory.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="7" selection-start="570" selection-end="570" vertical-scroll-proportion="0.7302231" vertical-offset="0" max-vertical-offset="1062">
           <folding />
         </state>
       </provider>

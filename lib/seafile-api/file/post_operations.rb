@@ -11,7 +11,7 @@ module SeafileApi
         p http
         p http.body
         if is_http?(http)
-          curb_post(cl_body_str(http),data).body_str
+          curl_post(cl_body_str(http),data).body_str
         else
           "something wrong #{http.body_str}"
         end
@@ -33,7 +33,7 @@ module SeafileApi
       def upload(file,repo)
         http = curl_get("repos/#{repo}/upload-link/")
         if is_http?(http)
-          curb_post(http,data).body_str
+          curl_post(http,data).body_str
         else
           "something wrong #{http.body_str}"
         end

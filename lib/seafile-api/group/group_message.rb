@@ -3,12 +3,12 @@ module SeafileApi
     private
     #curl -d "message=this is another test&repo_id=c7436518-5f46-4296-97db-2fcba4c8c8db&path=/123.md" -H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' "https://cloud.seafile.com/api2/group/msgs/1/"
     def send_message_to_group(group_id,data)
-      curb_post("#{self.host}/api2/group/msgs/#{group_id}/",data).body_str
+      curl_post("#{self.host}/api2/group/msgs/#{group_id}/",data).body_str
     end
 
     #curl -d "message=this is a reply" -H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' "https://cloud.seafile.com/api2/group/1/msg/1/"
     def reply_message_to_group(group_id,msg_id,data)
-      curb_post("#{self.host}/api2/group/#{group_id}/msg/#{msg_id}/",data).body_str
+      curl_post("#{self.host}/api2/group/#{group_id}/msg/#{msg_id}/",data).body_str
     end
 
     #curl -H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' "https://cloud.seafile.com/api2/group/msgs/1/"
