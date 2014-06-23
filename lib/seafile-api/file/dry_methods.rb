@@ -28,9 +28,17 @@ module SeafileApi
 
      def curl_post(url,data={})
       c = Curl::Easy.new(URI::encode(url))
+      c.multipart_form_post = true
       c.headers['Authorization'] = "Token #{get_sf_token}"
       data.delete_if { |key, value| value.nil? }
-      c.http_post(data.map{|key, value| Curl::PostField.content(key, value)}.join('&'))
+      p_data = data.map do |key, value|
+        if key != 'file'
+          Curl::PostField.content(key, value)
+        else
+          Curl::PostField.file(key, value)
+        end
+      end
+      c.http_post(p_data)
       c
      end
 
@@ -39,19 +47,21 @@ module SeafileApi
         http.headers['Authorization'] = "Token #{get_sf_token}"
       end
     end
-    def curl_put(url,data)
+    def curl_put(url,data={})
       c = Curl::Easy.new(URI::encode(url))
       c.headers['Authorization'] = "Token #{get_sf_token}"
       c.headers['Content-Type'] = 'application/json'
+      data.delete_if { |key, value| value.nil? }
       c.put_data= data.to_json
       c.post
       c
     end
-    def curl_delete(url,data='')
+    def curl_delete(url,data={})
       c = Curl::Easy.new(URI::encode(url))
       c.headers['Authorization'] = "Token #{get_sf_token}"
       c.headers['Content-Type'] = 'application/json'
-      c.put_data= data.to_json
+
+      c.put_data= data.to_json unless data ==''
       c.http_delete()
       c
     end

@@ -42,4 +42,3 @@ require "seafile-api/file/file_operations"
 require "seafile-api/file/get_operations"
 require "seafile-api/config"
 require "seafile-api/file"
-#TODO: write manual about seafile config

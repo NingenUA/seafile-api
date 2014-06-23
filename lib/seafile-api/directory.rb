@@ -8,14 +8,14 @@ module SeafileApi
       post_create_dir(path,repo)
     end
 
-    #TODO: TEST!
+    # You do not have permission to perform this action
     def del_dir(path,repo=self.repo)
       delete_directory(path,repo)
     end
     def download_dir(path,repo=self.repo)
       get_download_dir(path,repo)
     end
-    #TODO: TEST!
+    # You do not have permission to perform this action
     def share_dir(email,path,perm="r",repo=self.repo,s_type="d")
       post_share_dir(repo,{"email"=> email, "path"=> path,"s_type"=> s_type,"perm"=> perm})
     end
@@ -45,8 +45,7 @@ module SeafileApi
 
     #curl -v -X POST -d "emails=user@example.com&s_type=d&path=/dir&perm=r" -H 'Authorization: Token f2210dacd3606d94ff8e61d99b477fd' -H 'Accept: application/json; charset=utf-8; indent=4' https://cloud.seafile.com/api2/repos/dae8cecc-2359-4d33-aa42-01b7846c4b32/dir/share/
     def post_share_dir(repo,data)
-      curl_post("#{self.host}/api2/repos/#{repo}/dir/share/",data).head
-
+      curl_post("#{self.host}/api2/repos/#{repo}/dir/share/",data).body_str
 
     end
   end

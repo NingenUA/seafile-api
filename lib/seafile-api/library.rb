@@ -2,11 +2,11 @@ module SeafileApi
 
   class Connect
     #get libraries
-    def get_default_library
+    def default_library
       get_default_lib
     end
-    def create_sub_library(repo_id,name,p=nil)
-      get_create_sub_lib(repo_id,"/#{p}",name)
+    def create_sub_library(repo_id,name,p='/')
+      get_create_sub_lib(repo_id,p,name)
     end
     #search not supported
     def search_libraries(keyword)
@@ -19,15 +19,15 @@ module SeafileApi
     def list_virtual_libraries
       get_list_virtual_lib
     end
-    def get_library_info(repo_id)
+    def library_info(repo_id)
       get_lib_info(repo_id)
     end
 
-    def get_library_owner(repo_id)
+    def library_owner(repo_id)
       get_lib_owner(repo_id)
     end
 
-    def get_library_history(repo_id)
+    def library_history(repo_id)
       get_lib_history(repo_id)
     end
     def fetch_library_info(repo_id)
@@ -50,7 +50,7 @@ module SeafileApi
     end
 
     # del libraries
-    def delete_library(repo_id)
+    def del_library(repo_id)
       delete_lib(repo_id)
     end
     def remove_public_library(repo_id)

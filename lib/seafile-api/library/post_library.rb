@@ -14,7 +14,6 @@ module SeafileApi
 
 
     #curl -v -d "name=foo&desc=new library" -H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' -H 'Accept: application/json; indent=4' https://cloud.seafile.com/api2/repos/
-    #TODO: remake post for data with hash
     def post_lib(data)
       curl_post("#{self.host}/api2/repos/",data).body_str
     end

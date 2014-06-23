@@ -2,26 +2,15 @@ module SeafileApi
   class Connect
     private
       #update file_
-      #TODO: test
-      #TODO: analise and optimization arguments needed for file upload;
-      #TODO: add validation check
-      #TODO: execption rescue
-      def update(repo,data)
+      def post_update(repo,data)
         http = curl_get("repos/#{repo}/update-link/")
-        p http
-        p http.body
         if is_http?(http)
           curl_post(cl_body_str(http),data).body_str
         else
-          "something wrong #{http.body_str}"
+          "something wrong #{http.body}"
         end
 
       end
-
-      #upload file
-      #TODO: analise and optimization arguments needed for file upload;
-      #TODO: add validation check
-      #TODO: execption rescue
 =begin
     400 Bad request
     440 Invalid filename
@@ -30,10 +19,10 @@ module SeafileApi
     443 Out of quota
     500 Internal server error
 =end
-      def upload(file,repo)
+      def post_upload(repo,data)
         http = curl_get("repos/#{repo}/upload-link/")
         if is_http?(http)
-          curl_post(http,data).body_str
+          curl_post(cl_body_str(http),data).body_str
         else
           "something wrong #{http.body_str}"
         end

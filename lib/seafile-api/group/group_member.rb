@@ -6,7 +6,7 @@ module SeafileApi
       curl_put("#{self.host}/api2/groups/#{group_id}/members/",{"user_name" => user_email}).body_str
     end
 
-    def del_group_member(user_email,group_id)
+    def delete_group_member(user_email,group_id)
       curl_delete("#{self.host}/api2/groups/#{group_id}/members/",{'user_name' =>user_email}).body_str
     end
   end
