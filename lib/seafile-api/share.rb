@@ -17,7 +17,7 @@ module SeafileApi
       get_list_shared_files
     end
 
-    def download_shared_file(file_t)
+    def shared_file_link(file_t)
       get_shared_file_link(file_t)
     end
     def shared_file_detail(file_t)

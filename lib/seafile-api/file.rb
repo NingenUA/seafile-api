@@ -8,7 +8,7 @@ module SeafileApi
     def token
       get_sf_token
     end
-    def file_description(filename,repo=self.repo)
+    def file_detail(filename,repo=self.repo)
       get_description(filename,repo)
     end
 
