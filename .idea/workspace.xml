@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c56557fa-cee3-4c8d-bd93-43a339948b52" name="Default" comment="add functions for work with directory, and rebuild some logic&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/seafile-api/file.rb" afterPath="$PROJECT_DIR$/lib/seafile-api/file.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/seafile-api/share.rb" afterPath="$PROJECT_DIR$/lib/seafile-api/share.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seafile-api.iws" />
@@ -33,7 +31,7 @@
           <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="2" column="15" selection-start="31" selection-end="31" vertical-scroll-proportion="0.06360424" vertical-offset="0" max-vertical-offset="7146">
+                <state line="225" column="8" selection-start="4114" selection-end="4114" vertical-scroll-proportion="0.33215547" vertical-offset="3862" max-vertical-offset="7146">
                   <folding />
                 </state>
               </provider>
@@ -818,7 +816,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="15" selection-start="31" selection-end="31" vertical-scroll-proportion="0.06360424" vertical-offset="0" max-vertical-offset="7146">
+        <state line="225" column="8" selection-start="4114" selection-end="4114" vertical-scroll-proportion="0.33215547" vertical-offset="3862" max-vertical-offset="7146">
           <folding />
         </state>
       </provider>

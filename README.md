@@ -1,6 +1,6 @@
 # Seafile::Api
 
- make based on 
+ make based on https://github.com/haiwen/seafile/wiki/Seafile-web-API
 
 ## Installation
 
@@ -223,7 +223,7 @@ Or install it yourself as:
 + desc -> default value = "new repo"
 + pwd -> default value = nil
 
-    sf.create_library(name,desc="new repo",pwd=nil)
+        sf.create_library(name,desc="new repo",pwd=nil)
 
 ##### Check/Create Sub Library
 + repo id
