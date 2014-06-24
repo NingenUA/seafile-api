@@ -37,18 +37,17 @@ Or install it yourself as:
 #### Create Account
 + email
 + password
-
-    > sf.create_accounts(email,pass)
+        sf.create_accounts(email,pass)
 
 #### Update Account
 + email
 + password
 
-    > sf.update_account(email,pass)
+        sf.update_account(email,pass)
 
 #### Delete Account
 
-    > sf.del_account(email)
+    sf.del_account(email)
 
 ### Starred Files
 #### List starred files
@@ -56,19 +55,19 @@ Or install it yourself as:
 + file
 + repo_id -> default value = default repo
 
-    > sf.star_a_file(file,repo_id)
+        sf.star_a_file(file,repo_id)
 
 #### UnStar a File
 + file
 + repo_id -> default value = default repo
 
-    > sf.unstar_a_file(file,repo_id)
+        sf.unstar_a_file(file,repo_id)
 
 ### User Messages
 #### List User Messages
 + to email
 
-    > sf.list_user_message(to_email)
+        sf.list_user_message(to_email)
 
 #### Reply A User Message
     sf.unread_message
@@ -77,7 +76,7 @@ Or install it yourself as:
 + to email
 + message
 
-    > sf.reply_user_message(to_email,message)
+        sf.reply_user_message(to_email,message)
 
 ### Group
 #### List Groups
@@ -86,33 +85,33 @@ Or install it yourself as:
 #### Add A Group
 + group name
 
-    > sf.add_group(group_name)
+        sf.add_group(group_name)
 
 #### Group Member
 ##### Add a Group Member
 + user email
 + group id
 
-    > sf.add_group_member(user_email,group_id)
+        sf.add_group_member(user_email,group_id)
 
 ##### Delete a Group Member
 + user email
 + group id
 
-    > sf.del_group_member(user_email,group_id)
+        sf.del_group_member(user_email,group_id)
 
 #### Group Message
 
 ##### Get Group Messages
 + group id
 
-    > sf.group_messages(group_id)
+        sf.group_messages(group_id)
 
 ##### Get Group Messages Detail
 + group id
 + message id
 
-    > sf.group_message_detail(group_id,msg_id)
+        sf.group_message_detail(group_id,msg_id)
 
 ##### Send A Group Message
 + group id
@@ -120,14 +119,14 @@ Or install it yourself as:
 + repo id -> default value = default repo
 + path -> default value = '/'
 
-    > sf.send_group_message(group_id,message,repo_id,path)
+        sf.send_group_message(group_id,message,repo_id,path)
 
 ##### Reply A Group Message
 + group id
 + message
 + message id
 
-    > sf.reply_group_message(group_id,message,msg_id)
+        sf.reply_group_message(group_id,message,msg_id)
 
 ##### Get Group Message Replies
     sf.group_messages_replies
@@ -141,12 +140,12 @@ Or install it yourself as:
 + file
 + repo_id -> default value = default repo
 
-    > sf.create_file_share_link(file,repo_id=self.repo)
+        sf.create_file_share_link(file,repo_id=self.repo)
 
 ##### Delete File Share Link
 + shared token
 
-    > sf.delete_share_link(shared_t)
+        sf.delete_share_link(shared_t)
 
 ####
 
