@@ -10,7 +10,7 @@ module SeafileApi
     attr_accessor :password
     attr_accessor :host
     attr_accessor :repo
-    def initialize(user_name = 'kostiantyn.semchenko@masterofcode.com',password   = '7auVcKjoJB',host= 'http://fs.masterofcode.com',repo= '03b865ad-9153-4f24-9638-7f8a04ef67a4' )
+    def initialize(user_name ,password,host,repo)
       self.user_name  = user_name
       self.password   = password
       self.host       = host

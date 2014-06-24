@@ -380,11 +380,9 @@ Or install it yourself as:
 
         sf.share_dir(email,path,perm,repo,s_type)
 
-### Seafile
-
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/seafile-api/fork )
+1. Fork it ( http://github.com/NingenUA/seafile-api/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
