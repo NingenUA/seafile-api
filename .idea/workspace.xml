@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c56557fa-cee3-4c8d-bd93-43a339948b52" name="Default" comment="add functions for work with directory, and rebuild some logic&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seafile-api.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -102,7 +103,7 @@
           <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="26" column="21" selection-start="441" selection-end="441" vertical-scroll-proportion="0.4684015" vertical-offset="216" max-vertical-offset="2556">
+                <state line="39" column="0" selection-start="614" selection-end="614" vertical-scroll-proportion="0.6022305" vertical-offset="378" max-vertical-offset="2988">
                   <folding />
                 </state>
               </provider>
@@ -196,8 +197,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="97" />
-    <option name="y" value="60" />
+    <option name="x" value="632" />
+    <option name="y" value="44" />
     <option name="width" value="1822" />
     <option name="height" value="967" />
   </component>
@@ -538,7 +539,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="97" y="60" width="1822" height="967" extended-state="0" />
+    <frame x="632" y="44" width="1822" height="967" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919955" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -880,7 +881,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="21" selection-start="441" selection-end="441" vertical-scroll-proportion="0.4684015" vertical-offset="216" max-vertical-offset="2556">
+        <state line="39" column="0" selection-start="614" selection-end="614" vertical-scroll-proportion="0.6022305" vertical-offset="378" max-vertical-offset="2988">
           <folding />
         </state>
       </provider>
