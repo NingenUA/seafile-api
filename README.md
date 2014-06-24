@@ -21,10 +21,10 @@ Or install it yourself as:
     sf = SeafileApi::Connect.new(user_name,password,host,default_repo)
 
 ### Configuration
-    sf.user_name
-    sf.password
-    sf.host
-    sf.repo
+    sf.user_name = email
+    sf.password = password
+    sf.host = http://seafile.com
+    sf.repo = repo id
 
 ## Seafile-Api Methods
 ### Work with account

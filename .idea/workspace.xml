@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c56557fa-cee3-4c8d-bd93-43a339948b52" name="Default" comment="add functions for work with directory, and rebuild some logic&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seafile-api.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +30,7 @@
           <file leaf-file-name="seafile-api.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/lib/seafile-api.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="14" column="31" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="900">
+                <state line="12" column="104" selection-start="306" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="900">
                   <folding />
                 </state>
               </provider>
@@ -103,7 +102,7 @@
           <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="6" selection-start="225" selection-end="225" vertical-scroll-proportion="0.43333334" vertical-offset="108" max-vertical-offset="2556">
+                <state line="26" column="21" selection-start="441" selection-end="441" vertical-scroll-proportion="0.4684015" vertical-offset="216" max-vertical-offset="2556">
                   <folding />
                 </state>
               </provider>
@@ -143,7 +142,7 @@
           <file leaf-file-name="share.rb" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lib/seafile-api/share.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="20" column="34" selection-start="450" selection-end="450" vertical-scroll-proportion="0.28222996" vertical-offset="198" max-vertical-offset="1134">
+                <state line="20" column="34" selection-start="450" selection-end="450" vertical-scroll-proportion="0.28321677" vertical-offset="198" max-vertical-offset="1134">
                   <folding />
                 </state>
               </provider>
@@ -197,7 +196,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="428" />
+    <option name="x" value="97" />
     <option name="y" value="60" />
     <option name="width" value="1822" />
     <option name="height" value="967" />
@@ -539,15 +538,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="428" y="60" width="1822" height="967" extended-state="0" />
-    <editor active="false" />
+    <frame x="97" y="60" width="1822" height="967" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919955" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28271028" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20337078" sideWeight="0.50162864" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28337237" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20337078" sideWeight="0.501634" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20337078" sideWeight="0.49837133" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20337078" sideWeight="0.498366" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15282215" sideWeight="0.50087875" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -823,13 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.ruby-gemset">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="838">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/seafile-api/message.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="8" selection-start="181" selection-end="217" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
@@ -865,23 +857,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/seafile-api.rb">
+    <entry file="file://$PROJECT_DIR$/lib/seafile-api/share.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="31" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+        <state line="20" column="34" selection-start="450" selection-end="450" vertical-scroll-proportion="0.28321677" vertical-offset="198" max-vertical-offset="1134">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/seafile-api/share.rb">
+    <entry file="file://$PROJECT_DIR$/.ruby-gemset">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="34" selection-start="450" selection-end="450" vertical-scroll-proportion="0.28222996" vertical-offset="198" max-vertical-offset="1134">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="838">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/seafile-api.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="104" selection-start="306" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="900">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="6" selection-start="225" selection-end="225" vertical-scroll-proportion="0.43333334" vertical-offset="108" max-vertical-offset="2556">
+        <state line="26" column="21" selection-start="441" selection-end="441" vertical-scroll-proportion="0.4684015" vertical-offset="216" max-vertical-offset="2556">
           <folding />
         </state>
       </provider>
