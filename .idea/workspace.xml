@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c56557fa-cee3-4c8d-bd93-43a339948b52" name="Default" comment="add functions for work with directory, and rebuild some logic&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seafile-api.iws" />
@@ -102,7 +103,7 @@
           <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="40" column="33" selection-start="665" selection-end="665" vertical-scroll-proportion="0.52037036" vertical-offset="439" max-vertical-offset="2538">
+                <state line="19" column="6" selection-start="225" selection-end="225" vertical-scroll-proportion="0.43333334" vertical-offset="108" max-vertical-offset="2556">
                   <folding />
                 </state>
               </provider>
@@ -539,10 +540,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="428" y="60" width="1822" height="967" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919955" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28271028" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28271028" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20337078" sideWeight="0.50162864" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -880,7 +881,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="33" selection-start="665" selection-end="665" vertical-scroll-proportion="0.52037036" vertical-offset="439" max-vertical-offset="2538">
+        <state line="19" column="6" selection-start="225" selection-end="225" vertical-scroll-proportion="0.43333334" vertical-offset="108" max-vertical-offset="2556">
           <folding />
         </state>
       </provider>

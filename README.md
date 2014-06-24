@@ -15,11 +15,12 @@ Or install it yourself as:
     $ gem install seafile-api
 
 ## Usage
-###Initialize
+
+### Initialize
     require 'seafile-api'
     sf = SeafileApi::Connect.new(user_name,password,host,default_repo)
 
-###Configuration
+### Configuration
     sf.user_name
     sf.password
     sf.host
