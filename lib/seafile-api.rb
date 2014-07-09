@@ -10,11 +10,13 @@ module SeafileApi
     attr_accessor :password
     attr_accessor :host
     attr_accessor :repo
+    attr_accessor :token
     def initialize(user_name ,password,host,repo)
       self.user_name  = user_name
       self.password   = password
       self.host       = host
       self.repo       = repo
+      self.token      = self.get_token
     end
 
   end

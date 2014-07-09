@@ -5,13 +5,13 @@ module SeafileApi
     def file_link(filename,repo=self.repo)
       get_file_link(filename,repo)
     end
-    def token
+    def get_token
       get_sf_token
     end
     def file_detail(filename,repo=self.repo)
       get_description(filename,repo)
     end
-
+    #TODO: write test
     def link_revision(filename,commit_id,repo=self.repo)
       get_link_file_revision(filename,commit_id,repo)
     end
@@ -27,7 +27,7 @@ module SeafileApi
     def upload_file(file,repo=self.repo)
       post_upload(repo,{"file"=> file,"filename"=> File.basename(file),"parent_dir"=> "/"})
     end
-
+    #TODO: write test
     def update_file(file,target_file=nil,repo=self.repo)
       post_update(repo,{"file" => file, "filename" =>File.basename(file), "target_file"=> target_file ||File.basename(file)})
     end
@@ -40,8 +40,9 @@ module SeafileApi
       post_rename(old_name,repo,{"operation"=>"rename", "newname" => new_name})
     end
 
-    def copy_file(filename,dst_dir='/',dest_repo=self.repo,src_repo=self.repo)
-      post_copy(src_repo,{"file_names"=>filename, "dst_repo" => dest_repo, "dst_dir"=>dst_dir})
+    #TODO: missing arguments
+    def copy_file(filename,dst_dir='/',dst_repo=self.repo,src_repo=self.repo)
+      post_copy(src_repo,{"file_names"=>filename, "dst_repo" => dst_repo, "dst_dir"=>dst_dir})
     end
 
     def move_file(filename,dst_dir='/',dest_repo=self.repo,src_repo=self.repo)

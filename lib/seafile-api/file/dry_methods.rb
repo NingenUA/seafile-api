@@ -43,9 +43,10 @@ module SeafileApi
      end
 
     def curl_get(url)
-      Curl.get(URI::encode("#{self.host}/api2/#{url}")) do|http|
+     c= Curl.get(URI::encode("#{self.host}/api2/#{url}")) do|http|
         http.headers['Authorization'] = "Token #{get_sf_token}"
-      end
+     end
+     c
     end
     def curl_put(url,data={})
       c = Curl::Easy.new(URI::encode(url))
