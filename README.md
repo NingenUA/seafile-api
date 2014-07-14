@@ -15,7 +15,10 @@ And then execute:
 Or install it yourself as:
 
     $ gem install seafile-api
-
+## Tests
+For tests need update tests/spec_helper.rb with your data
+after this run:
+    rspec tests
 ## Usage
 
 ### Initialize
