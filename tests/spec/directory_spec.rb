@@ -11,6 +11,7 @@ describe 'SeafileApi' do
     it "should create new Connect " do
       expect(@sf.token).to match(/\w{3,}/)
     end
+
     it "should create directory" do
       expect(@sf.create_dir("/test")).to match("success")
     end
