@@ -24,9 +24,6 @@ module SeafileApi
       get_share_file_detail(file_t)
     end
 
-    def del_shared_file(file_t)
-      delete_shared_file(file_t)
-    end
     #
     #TODO need know what is private shared file -> need test"error_msg\": \"Token not found\"}
     def download_private_shared_file(file_t)

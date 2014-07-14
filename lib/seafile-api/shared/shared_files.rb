@@ -25,10 +25,7 @@ module SeafileApi
       curl_get("s/f/#{file_t}/detail/").body_str
     end
 
-    #curl -v -X DELETE -H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' "https://cloud.seafile.com/api2/shared-files/?t=94aace406a"
-    def delete_shared_file(file_t)
-      curl_delete("#{self.host}/api2/shared-links/?t=#{file_t}").head.split()[2]
-    end
+
   end
 
 end

@@ -4,20 +4,21 @@ describe 'SeafileApi' do
 
   describe 'starred file' do
     before(:all) do
-      @sf = SeafileApi::Connect.new("kostiantyn.semchenko@masterofcode.com","Gfhjkm123456","http://fs.masterofcode.com","03b865ad-9153-4f24-9638-7f8a04ef67a4")
+      SF::upload_file('tests/spec/fixtures/test.pdf')
     end
-    it "should create new Connect " do
-      expect(@sf.token).to match(/\w{3,}/)
+    after(:all) do
+      SF::del_file("/test.pdf")
     end
 
+
     it "should star_a_file" do
-      expect(@sf.star_a_file("/test.pdf")).to match("success")
+      expect(SF::star_a_file("/test.pdf")).to match("success")
     end
     it "should show list starred" do
-      expect(@sf.list_starred).to match(/\[/)
+      expect(SF::list_starred).to match(/\[/)
     end
     it "should unstar a file" do
-      expect(@sf.unstar_a_file("/test.pdf")).to match("success")
+      expect(SF::unstar_a_file("/test.pdf")).to match("success")
     end
   end
 
