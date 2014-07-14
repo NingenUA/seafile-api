@@ -3,7 +3,7 @@ require_relative '../spec_helper'
 
 describe 'SeafileApi::Connect' do
   before(:all) do
-      @sf = SeafileApi::Connect.new("kostiantyn.semchenko@masterofcode.com","Gfhjkm123456","http://fs.masterofcode.com/","03b865ad-9153-4f24-9638-7f8a04ef67a4")
+    @sf = SeafileApi::Connect.new("kostiantyn.semchenko@masterofcode.com","Gfhjkm123456","http://fs.masterofcode.com","03b865ad-9153-4f24-9638-7f8a04ef67a4")
   end
 
   it "should create new Connect " do
@@ -11,7 +11,7 @@ describe 'SeafileApi::Connect' do
   end
 
   it "shouldn't create new Connect " do
-    sf = SeafileApi::Connect.new("kostiantyn.seadsdasdmchenko@masterofcode.com","Gfhjkrtyrty","http://fs.masterofcode.com/","03b865ad-9153-4f24-9638-7f8a04ef67a4")
+    sf = SeafileApi::Connect.new("kostiantyn.seadsdasdmchenko@masterofcode.com","Gfhjkrtyrty","http://fs.masterofcode.com","03b865ad-9153-4f24-9638-7f8a04ef67a4")
     expect(sf.token).to eq(nil)
   end
 
@@ -56,6 +56,8 @@ describe 'SeafileApi::Connect' do
     end
     it "should delete file" do
       expect(@sf.del_file("/222/rename.pdf")).to match(/success/)
+      expect(@sf.del_file("/test.pdf")).to match(/success/)
+
     end
 
 

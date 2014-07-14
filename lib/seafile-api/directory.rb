@@ -27,18 +27,20 @@ module SeafileApi
       cl_body_str(http)
     end
 
+
     #curl -d  "operation=mkdir" -v  -H 'Authorization: Tokacd9c6ccb8133606d94ff8e61d99b477fd' -H 'Accept: application/json; charset=utf-8; indent=4' https://cloud.seafile.com/api2/repos/dae8cecc-2359-4d33-aa42-01b7846c4b32/dir/?p=/foo
     def post_create_dir(path,repo)
       curl_post("#{self.host}/api2/repos/#{repo}/dir/?p=#{path}",{"operation"=>"mkdir"}).body_str
     end
 
-    #curl -X DELETE -v  -H 'Authorization: Token f2210dacd3606d94ff8e61d99b477fd' -H 'Accept: application/json; charset=utf-8; indent=4' https://cloud.seafile.com/api2/repos/dae8cecc-2359-4d33-aa42-01b7846c4b32/dir/?p=/foo
-    def delete_directory(repo,path)
+
+   #curl -X DELETE -v  -H 'Authorization: Token f2210dacd3606d94ff8e61d99b477fd' -H 'Accept: application/json; charset=utf-8; indent=4' https://cloud.seafile.com/api2/repos/dae8cecc-2359-4d33-aa42-01b7846c4b32/dir/?p=/foo
+    def delete_directory(path,repo)
       curl_delete("#{self.host}/api2/repos/#{repo}/dir/?p=#{path}").body_str
     end
 
     #curl -H 'Authorization: Token f2210dacd3606d94ff8e61d99b477fd' -H 'Accept: application/json; charset=utf-8; indent=4' https://cloud.seafile.com/api2/repos/dae8cecc-2359-4d33-aa42-01b7846c4b32/dir/download/?p=/foo
-    def get_download_dir(repo,path)
+    def get_download_dir(path,repo)
       http = curl_get("repos/#{repo}/dir/download/?p=#{path}")
       cl_body_str(http)
     end
