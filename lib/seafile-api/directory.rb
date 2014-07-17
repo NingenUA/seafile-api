@@ -24,7 +24,7 @@ module SeafileApi
     #curl -H "Authorization: Token f2210dacd9c6ccb8133606d94ff8e6fd" -H 'Accept: application/json; indent=4' https://cloud.seafile.com/api2/repos/99b758e6-91ab-4265-b705-925367374cf0/dir/?p=/foo
     def get_list_dir_entry(repo,path)
       http = curl_get("repos/#{repo}/dir/?p=#{path}")
-      cl_body_str(http)
+      JSON.parse(http.body_str)
     end
 
 
