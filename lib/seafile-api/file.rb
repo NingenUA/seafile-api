@@ -24,8 +24,8 @@ module SeafileApi
       get_block(repo)
     end
 
-    def upload_file(file,repo=self.repo)
-      post_upload(repo,{"file"=> file,"filename"=> File.basename(file),"parent_dir"=> "/"})
+    def upload_file(file,path='/',repo=self.repo)
+      post_upload(repo,{"file"=> file,"filename"=> File.basename(file),"parent_dir"=> "#{path}"})
     end
     #TODO: write test
     def update_file(file,target_file=nil,repo=self.repo)
