@@ -333,9 +333,10 @@ after this run:
 
 ##### Upload File
 + filename
++ path -> default value = '/'
 + repo -> default value = default repo
 
-        sf.upload_file(file,repo=self.repo)
+        sf.upload_file(file,path='/',repo=self.repo)
 
 ##### Update File
 + filename
