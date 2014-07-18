@@ -6,10 +6,10 @@ RSpec.configure do |config|
     test_dir.destroy if test_dir and !test_dir.is_deleted?
   end
 end
-email="email"
-password="password"
-host="http://hostl.com"
-repo="0311b865ad-9153-4f24-9638-7f8a04ef67a4"
-$another_email="another@mail.com"
+email="kostiantyn.semchenko@masterofcode.com"
+password="Gfhjkm123456"
+host="http://fs.masterofcode.com"
+repo="03b865ad-9153-4f24-9638-7f8a04ef67a4"
+$another_email="alexandra.zinchenko@masterofcode.com"
 
 SF = SeafileApi::Connect.new(email,password,host,repo)

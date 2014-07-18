@@ -15,7 +15,7 @@ describe 'SeafileApi' do
       expect(SF::star_a_file("/test.pdf")).to match("success")
     end
     it "should show list starred" do
-      expect(SF::list_starred).to match(/\[/)
+      expect(SF::list_starred).to be_instance_of Array
     end
     it "should unstar a file" do
       expect(SF::unstar_a_file("/test.pdf")).to match("success")

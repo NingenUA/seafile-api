@@ -11,14 +11,6 @@ module SeafileApi
         end
 
       end
-=begin
-    400 Bad request
-    440 Invalid filename
-    441 File already exists
-    442 File size is too large
-    443 Out of quota
-    500 Internal server error
-=end
       def post_upload(repo,data)
         http = curl_get("repos/#{repo}/upload-link/")
         if is_http?(http)

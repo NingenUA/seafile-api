@@ -39,14 +39,14 @@ module SeafileApi
         def get_description(filename,repo)
           http = curl_get("repos/#{repo}/file/detail/?p=#{filename}")
 
-          result(cl_body_str(http))
+          JSON.parse(http.body_str)
         end
 
         #curl -H 'Authorization: Token f2210dacd3606d94ff8e61d99b477fd' -H 'Accept: application/json; charset=utf-8; indent=4' https://cloud.seafile.com/api2/repos/dae8cecc-2359-4d33-aa42-01b7846c4b32/file/history/?p=/foo.c
         #get file History
         def get_history(filename,repo)
           http = curl_get("repos/#{repo}/file/history/?p=#{filename}")
-          result(http.body_str.gsub('"', ''))
+          JSON.parse(http.body_str)
         end
 
      

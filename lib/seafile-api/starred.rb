@@ -13,7 +13,7 @@ module SeafileApi
     private
     #https://cloud.seafile.com/api2/starredfiles/
     def get_list_starred_files
-      curl_get("starredfiles/").body_str
+       JSON.parse(curl_get("starredfiles/").body_str)
     end
     #curl -v -d "repo_id=dae8cecc-2359-4d33-aa42-01b7846c4b32&p=/foo.md" -H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' -H 'Accept: application/json; charset=utf-8; indent=4' https://cloud.seafile.com/api2/starredfiles/
     def post_star_file(data)

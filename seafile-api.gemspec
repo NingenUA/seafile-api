@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "seafile-api"
-  spec.version       = '0.2'
+  spec.version       = '0.3'
   spec.authors       = ["Kostiantyn Semchenko"]
   spec.email         = ["kostiantyn.semchenko@masterofcode.com"]
   spec.summary       = "Seafile-Api"

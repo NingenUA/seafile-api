@@ -9,7 +9,7 @@ describe 'SeafileApi' do
       expect(SF::create_dir("/test")).to match("success")
     end
     it "should show list of dir entry" do
-      expect(SF::list_dir_entry).to match("test.pdf")
+      expect(SF::list_dir_entry).to be_instance_of Array
     end
     it "should show give_download dir_url" do
       expect(SF::download_dir("/test")).to match("test")

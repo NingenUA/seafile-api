@@ -22,16 +22,15 @@ describe 'SeafileApi::Connect' do
     end
 
     it "should return file detail" do
-      expect(SF::file_detail('test.pdf')).to match(/name/)
+      expect(SF::file_detail('test.pdf')).to include(/name/)
     end
 
     it "should return file history" do
-      expect(SF::file_history('test.pdf')).to match(/commits/)
+      expect(SF::file_history('test.pdf')).to include(/commits/)
     end
-
     it "should return block link" do
       expect(SF::block_link).to match(/\/upload-blks-api\//)
-      end
+    end
 
     xit "should update file" do
       expect(SF::update_file('tests/spec/fixtures/12.pdf',"test.pdf")).to match(/\/upload-blks-api\//)

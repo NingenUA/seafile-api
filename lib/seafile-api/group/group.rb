@@ -7,11 +7,11 @@ module SeafileApi
 
     def put_new_group(group_name)
       c = curl_put("#{self.host}/api2/groups/",{"group_name" => group_name})
-      c.body_str
+      JSON.parse(c.body_str)
     end
 
     def get_list_groups
-      curl_get("groups/").body_str
+      JSON.parse(curl_get("groups/").body_str)
     end
 
   end

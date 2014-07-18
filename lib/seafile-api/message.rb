@@ -13,18 +13,18 @@ module SeafileApi
     private
     #curl -H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' "https://cloud.seafile.com/api2/user/msgs/"#{email}/"
     def get_list_message(email)
-      curl_get("user/msgs/#{email}/").body_str
+       JSON.parse(curl_get("user/msgs/#{email}/").body_str)
     end
 
     #curl -H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' "https://cloud.seafile.com/api2/unseen_messages/"
 
     def get_count_unread_message
-      curl_get("unseen_messages/").body_str
+       JSON.parse(curl_get("unseen_messages/").body_str)
     end
 
     #curl -d "message=this is a user msg reply" -H 'Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd' "https://cloud.seafile.com/api2/user/msgs/2/"
     def post_reply_message(email,data)
-      curl_post("#{self.host}/api2/user/msgs/#{email}/",data).body_str
+       JSON.parse(curl_post("#{self.host}/api2/user/msgs/#{email}/",data).body_str)
     end
 
   end

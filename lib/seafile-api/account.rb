@@ -24,7 +24,7 @@ module SeafileApi
     end
   #curl -H "Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd" -H 'Accept: application/json; indent=4' https://cloud.seafile.com/api2/accounts/
     def get_list_acc
-      curl_get("accounts").body_str
+      JSON.parse(curl_get("accounts").body_str)
     end
   #curl -v -X PUT -d "password=123456" -H "Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd" -H 'Accept: application/json; indent=4' https://cloud.seafile.com/api2/accounts/newaccount@gmail.com/
     def put_create_acc(email,pass)
@@ -37,7 +37,7 @@ module SeafileApi
 
   #curl -H "Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd" -H 'Accept: application/json; indent=4' https://cloud.seafile.com/api2/account/info/
     def get_acc_info
-      curl_get("/account/info/").body_str
+       JSON.parse(curl_get("/account/info/").body_str)
     end
 
 

@@ -18,22 +18,22 @@ describe 'SeafileApi' do
     end
 
     it "should show list share link" do
-      expect(SF::list_file_share_link).to match("fileshares")
+      expect(SF::list_file_share_link).to include("fileshares")
     end
 
 
     it "should show list shared file" do
-      expect(SF::list_shared_files).to match("priv_share_in")
+      expect(SF::list_shared_files).to include("priv_share_in")
     end
     it "should show list share link" do
-      expect(SF::shared_file_link(@shared_token)).to match("files")
+      expect(SF::shared_file_link(@shared_token)).to include("files")
     end
     it "should show shared file detail" do
-      expect(SF::shared_file_detail(@shared_token)).to match("name")
+      expect(SF::shared_file_detail(@shared_token)).to include("name")
     end
 
     it "should show list shared libraries" do
-      expect(SF::list_shared_libraries).to match("user")
+      expect(SF::list_shared_libraries.first).to include("user")
     end
 
 
