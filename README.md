@@ -317,7 +317,7 @@ after this run:
         sf.move_file(filename,dst_dir,dest_repo,src_repo)
 
 
-##### Copy File (not working at seafile 3.0.4 - missing arguments)
+##### Copy File (at 3.0.0 - working , but at 3,0,4 not working -missing arguments)
 + filename
 + destination dir -> default value = '/'
 + destination repo -> default value = default repo
