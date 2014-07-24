@@ -11,7 +11,6 @@ module SeafileApi
     def file_detail(filename,repo=self.repo)
       get_description(filename,repo)
     end
-    #TODO: write test
     def link_revision(filename,commit_id,repo=self.repo)
       get_link_file_revision(filename,commit_id,repo)
     end
@@ -27,7 +26,6 @@ module SeafileApi
     def upload_file(file,path='/',repo=self.repo)
       post_upload(repo,{"file"=> file,"filename"=> File.basename(file),"parent_dir"=> "#{path}"})
     end
-    #TODO: write test
     def update_file(file,target_file=nil,repo=self.repo)
       post_update(repo,{"file" => file, "filename" =>File.basename(file), "target_file"=> target_file ||File.basename(file)})
     end
@@ -40,7 +38,7 @@ module SeafileApi
       post_rename(old_name,repo,{"operation"=>"rename", "newname" => new_name})
     end
 
-    #TODO: missing arguments
+    #TODO: missing arguments at 3,0,3 , at 3.0.0 all wark
     def copy_file(filename,dst_dir='/',dst_repo=self.repo,src_repo=self.repo)
       post_copy(src_repo,{"file_names"=>filename, "dst_repo" => dst_repo, "dst_dir"=>dst_dir})
     end

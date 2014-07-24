@@ -17,7 +17,6 @@ module SeafileApi
       delete_acc(email)
     end
   private
-  #TODO: add result processing
   #https://cloud.seafile.com/api2/accounts/{email}/
     def delete_acc(email)
       curl_delete("#{self.host}/api2/accounts/#{email}").body_str

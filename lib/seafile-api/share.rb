@@ -25,7 +25,7 @@ module SeafileApi
     end
 
     #
-    #TODO need know what is private shared file -> need test"error_msg\": \"Token not found\"}
+    #`TODO need know what is private shared file -> need test"error_msg\": \"Token not found\"}
     def download_private_shared_file(file_t)
       get_private_shared_file_link(file_t)
     end
