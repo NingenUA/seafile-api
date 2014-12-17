@@ -1,7 +1,7 @@
 require 'json'
 require 'curb'
 require 'net/http'
-include URI
+require 'uri'
 
 module SeafileApi
   class Connect
