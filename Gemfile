@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
-gem 'curb', '~> 0.8.5'
-
+gem 'curb', '~> 0.8.8'
 group :development do
   gem 'rspec', '>= 3.0'
   gem 'mechanize'
