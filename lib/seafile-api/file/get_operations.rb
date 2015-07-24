@@ -3,12 +3,12 @@ module SeafileApi
     private
       def get_sf_token
          if self.token == nil
-            token_url = URI.parse("#{self.host}/api2/auth-token/")
-            begin
-              res = Net::HTTP.post_form(token_url, :username => self.user_name , :password => self.password)
-            rescue Exception => e
-              p "!!!!!!!!!!!!!!!! #{e}"
-            end
+            token_url = "#{self.host}/api2/auth-token/)"
+             res = Curl::Easy.new(URI::encode(token_url))
+             p_data = {username: self.user_name , password: self.password}.map do |key, value|
+                 Curl::PostField.content(key, value)
+             end
+             res.http_post(p_data)
             JSON.parse(res.body)["token"]
          else
            self.token

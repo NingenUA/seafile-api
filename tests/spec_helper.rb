@@ -9,7 +9,7 @@ end
 
 email="kostiantyn.semchenko@masterofcode.com"
 password="Gfhjkm123456"
-host="http://ocean.comfortsteel.com"
+host="http://ocean.masterofcode.com"
 repo="03b865ad-9153-4f24-9638-7f8a04ef67a4"
 $another_email="alexandra.zi7nchenko@masterofcode.com"
 SF = SeafileApi::Connect.new(email,password,host,repo)
