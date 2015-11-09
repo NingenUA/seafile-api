@@ -37,7 +37,7 @@ after this run:
     sf.list_accounts
 
 #### Check Account info
-    sv.account_info
+    sf.account_info
 
 #### Create Account
 + email
