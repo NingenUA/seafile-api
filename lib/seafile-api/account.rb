@@ -36,7 +36,7 @@ module SeafileApi
 
   #curl -H "Authorization: Token f2210dacd9c6ccb8133606d94ff8e61d99b477fd" -H 'Accept: application/json; indent=4' https://cloud.seafile.com/api2/account/info/
     def get_acc_info
-       JSON.parse(curl_get("/account/info/").body_str)
+       JSON.parse(curl_get("/api2/account/info/").body_str)
     end
 
 
