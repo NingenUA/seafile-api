@@ -7,9 +7,9 @@ RSpec.configure do |config|
   end
 end
 
-email="kostiantyn.semchenko@masterofcode.com"
-password="Gfhjkm123456"
-host="http://ocean.masterofcode.com"
-repo="03b865ad-9153-4f24-9638-7f8a04ef67a4"
-$another_email="alexandra.zi7nchenko@masterofcode.com"
+email="kos646tero@fcode.com"
+password="Gfhj44346456"
+host="http://oc5556ofcertode.com"
+repo="03b865a46"
+$another_email="alexand46hfgh@erofcode.com"
 SF = SeafileApi::Connect.new(email,password,host,repo)
