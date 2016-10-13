@@ -52,8 +52,8 @@ module SeafileApi
       c.headers['Authorization'] = "Token #{get_sf_token}"
       c.headers['Content-Type'] = 'application/json'
       data.delete_if { |key, value| value.nil? }
-      c.put_data= data.to_json
-      c.post
+      #c.put_data= data.to_json
+      c.http_put(data.to_json)
       c
     end
     def curl_delete(url,data={})
